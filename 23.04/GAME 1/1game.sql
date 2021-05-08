@@ -60,4 +60,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 SELECT * FROM db_generation_game_online.tb_personagem WHERE ataque > 2000;
 SELECT * FROM db_generation_game_online.tb_personagem WHERE defesa BETWEEN 1000 AND 2000;
-SELECT * FROM db_generation_game_online.tb_personagem WHERE nome LIKE "%C%"
+SELECT * FROM db_generation_game_online.tb_personagem WHERE nome LIKE "%C%";
+
+SELECT * FROM tb_personagem INNER JOIN tb_classe on tb_classe.id_classe = tb_personagem.tb_classe_id_classe;
+SELECT * FROM tb_personagem INNER JOIN tb_classe on tb_classe.id_categoria = tb_personagem.tb_classe_id_classe WHERE `tb_personagem`.`tb_classe_id_classe`= 3;
